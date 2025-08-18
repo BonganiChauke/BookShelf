@@ -1,5 +1,5 @@
 <!-- header -->
-<?php include '/includes/header.php'; ?>
+<?php include './includes/header.php'; ?>
 
 <!-- login header section -->
 <div class="container-fluid p-0">
@@ -14,4 +14,4 @@
 
 
 <!-- footer -->
- <?php include '/includes/footer.php'; ?>
+ <?php include './includes/footer.php'; ?>

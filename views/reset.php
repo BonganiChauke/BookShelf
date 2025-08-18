@@ -1,5 +1,5 @@
 <!-- header -->
-<?php include '../includes/header.php'; ?>
+<?php include './includes/header.php'; ?>
 
 <!-- reset password header section -->
 <div class="container-fluid p-0">
@@ -13,4 +13,4 @@
 </div>
 
 <!-- footer -->
- <?php include '../includes/footer.php'; ?>
+ <?php include './includes/footer.php'; ?>
