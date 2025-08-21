@@ -39,6 +39,10 @@ body{
     color: #1ebba3;
 }
 
+.navbar-toggler-icon{
+    color: white;
+}
+
 /* hero section */
 .hero-section {
     position: relative;
