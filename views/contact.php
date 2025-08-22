@@ -3,15 +3,54 @@
 
 <!-- contact header section -->
 <div class="container-fluid p-0">
-    <div class="hero-section text-white d-flex align-items-center" style="height: 100vh; background-size: cover; background-position: center;">
+    <div class="hero-section text-white d-flex align-items-center"
+        style="height: 100vh; background-size: cover; background-position: center;">
         <div class="container text-center">
             <h1 class="display-4 fw-bold">Get in touch</h1>
             <p class="lead">Browse thousands of books from your favorite authors</p>
-            
+
         </div>
     </div>
 </div>
 
+<!-- contact form -->
+<section class="h-100 h-custom">
+
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+                <div class="card rounded-3">
+                    <img src="../assets/images/pexels-pixabay-159711.jpg"
+                        style="border-top-left-radius: .3rem; border-top-right-radius: .3rem" alt="contact form image">
+                    <div class="card-body p-4 p-md-5" data-mdb-theme="dark" style="background-color: gray;">
+                        <h3 class="mb-4 pb-2 pb=md-0 mb-md-5 px-md-2">Contact US</h3>
+                        <!-- contact form -->
+                        <form class="px-md-2" action="" method="post">
+                            <!-- first name input -->
+                            <div data-mdb-input-init class="form-outline mb-4">
+                                <input type="text" id="first_name" class="form-control" />
+                                <label class="form-label" for="first_name">First Name</label>
+                                <span class="error-msg"></span>
+                            </div>
+
+                            <!-- last name input -->
+                             <div data-mdb-input-init class="form-outline mb-4">
+                                <input type="text" id="last_name" class="form-control" />
+                                <label class="form-label" for="last_name">Last Name</label>
+                                <span class="error-msg"></span>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
 
 <!-- footer -->
- <?php include '../includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
