@@ -22,24 +22,42 @@
                 <div class="card rounded-3">
                     <img src="../assets/images/pexels-pixabay-159711.jpg"
                         style="border-top-left-radius: .3rem; border-top-right-radius: .3rem" alt="contact form image">
-                    <div class="card-body p-4 p-md-5" data-mdb-theme="dark" style="background-color: gray;">
+                    <div class="card-body p-4 p-md-5">
                         <h3 class="mb-4 pb-2 pb=md-0 mb-md-5 px-md-2">Contact US</h3>
                         <!-- contact form -->
                         <form class="px-md-2" action="" method="post">
+
                             <!-- first name input -->
-                            <div data-mdb-input-init class="form-outline mb-4">
-                                <input type="text" id="first_name" class="form-control" />
+                            <div class="form-floating mb-4">
+                                <input type="text" id="first_name" class="form-control" placeholder="" />
                                 <label class="form-label" for="first_name">First Name</label>
-                                <span class="error-msg"></span>
+                                <span class="error-msg text-danger"></span>
                             </div>
 
                             <!-- last name input -->
-                             <div data-mdb-input-init class="form-outline mb-4">
-                                <input type="text" id="last_name" class="form-control" />
+                            <div class="form-floating mb-4">
+                                <input type="text" id="last_name" class="form-control" placeholder="" />
                                 <label class="form-label" for="last_name">Last Name</label>
-                                <span class="error-msg"></span>
+                                <span class="error-msg text-danger"></span>
                             </div>
 
+                            <!-- email input -->
+                            <div class="form-floating mb-4">
+                                <input type="email" class="form-control" id="email" placeholder="">
+                                <label for="email">Email</label>
+                                <span class="error-msg text-danger"></span>
+                            </div>
+
+                            <!-- message input -->
+                            <div class="form-floating mb-4">
+                                <textarea class="form-control" placeholder="" id="message"
+                                    style="height: 250px"></textarea>
+                                <label for="message">Message</label>
+                                <span class="error-msg text-danger"></span>
+                            </div>
+
+                            <!-- button to save -->
+                            <button type="submit" class="btn btn-primary">Submit</button>
 
                         </form>
                     </div>
