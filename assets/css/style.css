@@ -62,3 +62,7 @@ body{
     z-index: 1;
 }
 
+/* forms */
+textarea{
+    resize: none;
+}
