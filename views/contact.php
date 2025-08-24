@@ -19,13 +19,28 @@
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-lg-8 col-xl-6">
+
                 <div class="card rounded-3">
+
                     <img src="../assets/images/pexels-pixabay-159711.jpg"
                         style="border-top-left-radius: .3rem; border-top-right-radius: .3rem" alt="contact form image">
-                    <div class="card-body p-4 p-md-5">
-                        <h3 class="mb-4 pb-2 pb=md-0 mb-md-5 px-md-2">Contact US</h3>
+
+                    <div class="card-body p-4 p-md-3">
+
+                        <h3 class="mb-3 pb-2 pb=md-0 mb-md-2 px-md-2">Contact US</h3>
+
                         <!-- contact form -->
-                        <form class="px-md-2" action="" method="post">
+                        <form class="px-md-2" action="" method="post" id="save_message">
+
+                            <!-- error message alert -->
+                            <div class="alert alert-danger alert-dismissible fade show d-none" id="alert-danger" role="alert">
+                                <span id="error-message"></span>
+                            </div>
+
+                            <!-- success message alert -->
+                            <div class="alert alert-success alert-dismissible fade show d-none" id="alert-success" role="alert">
+                                <span id="success-message"></span>
+                            </div>
 
                             <!-- first name input -->
                             <div class="form-floating mb-4">
@@ -45,6 +60,13 @@
                             <div class="form-floating mb-4">
                                 <input type="email" class="form-control" id="email" placeholder="">
                                 <label for="email">Email</label>
+                                <span class="error-msg text-danger"></span>
+                            </div>
+
+                            <!-- phone number input -->
+                            <div class="form-floating mb-4">
+                                <input type="number" class="form-control" id="phone_number" placeholder="">
+                                <label for="phone_number">Phone Number</label>
                                 <span class="error-msg text-danger"></span>
                             </div>
 
