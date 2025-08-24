@@ -44,35 +44,35 @@
 
                             <!-- first name input -->
                             <div class="form-floating mb-4">
-                                <input type="text" id="first_name" class="form-control" placeholder="" />
+                                <input type="text" id="first_name" class="item form-control" placeholder="" />
                                 <label class="form-label" for="first_name">First Name</label>
                                 <span class="error-msg text-danger"></span>
                             </div>
 
                             <!-- last name input -->
                             <div class="form-floating mb-4">
-                                <input type="text" id="last_name" class="form-control" placeholder="" />
+                                <input type="text" id="last_name" class="item form-control" placeholder="" />
                                 <label class="form-label" for="last_name">Last Name</label>
                                 <span class="error-msg text-danger"></span>
                             </div>
 
                             <!-- email input -->
                             <div class="form-floating mb-4">
-                                <input type="email" class="form-control" id="email" placeholder="">
+                                <input type="email" class="item form-control" id="email" placeholder="">
                                 <label for="email">Email</label>
                                 <span class="error-msg text-danger"></span>
                             </div>
 
                             <!-- phone number input -->
                             <div class="form-floating mb-4">
-                                <input type="number" class="form-control" id="phone_number" placeholder="">
+                                <input type="number" class="item form-control" id="phone_number" placeholder="">
                                 <label for="phone_number">Phone Number</label>
                                 <span class="error-msg text-danger"></span>
                             </div>
 
                             <!-- message input -->
                             <div class="form-floating mb-4">
-                                <textarea class="form-control" placeholder="" id="message"
+                                <textarea class="item form-control" placeholder="" id="message"
                                     style="height: 250px"></textarea>
                                 <label for="message">Message</label>
                                 <span class="error-msg text-danger"></span>
