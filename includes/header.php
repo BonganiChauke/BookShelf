@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- style css -->
     <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- script tag -->
+    <script src="../assets/javascript/script.js"></script>
 
 </head>
 
