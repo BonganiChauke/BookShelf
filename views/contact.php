@@ -1,5 +1,6 @@
-<!-- header -->
-<?php include '../includes/header.php'; ?>
+<!-- header included and database connection -->
+<?php include '../includes/header.php';
+include('../includes/header.php') ?>
 
 <!-- contact header section -->
 <div class="container-fluid p-0">
@@ -30,49 +31,54 @@
                         <h3 class="mb-3 pb-2 pb=md-0 mb-md-2 px-md-2">Contact US</h3>
 
                         <!-- contact form -->
-                        <form class="px-md-2" action="" method="post" id="save_message">
+                        <form class="px-md-2" action="/views/contact.php" method="post" id="save_message">
 
                             <!-- error message alert -->
-                            <div class="alert alert-danger alert-dismissible fade show d-none" id="alert-danger" role="alert">
+                            <div class="alert alert-danger alert-dismissible fade show d-none" id="alert-danger"
+                                role="alert">
                                 <span id="error-message"></span>
                             </div>
 
                             <!-- success message alert -->
-                            <div class="alert alert-success alert-dismissible fade show d-none" id="alert-success" role="alert">
+                            <div class="alert alert-success alert-dismissible fade show d-none" id="alert-success"
+                                role="alert">
                                 <span id="success-message"></span>
                             </div>
 
                             <!-- first name input -->
                             <div class="form-floating mb-4">
-                                <input type="text" id="first_name" class="item form-control" placeholder="" />
+                                <input type="text" id="first_name" name="name" class="item form-control"
+                                    placeholder="" />
                                 <label class="form-label" for="first_name">First Name</label>
                                 <span class="error-msg text-danger"></span>
                             </div>
 
                             <!-- last name input -->
                             <div class="form-floating mb-4">
-                                <input type="text" id="last_name" class="item form-control" placeholder="" />
+                                <input type="text" id="last_name" name="last_name" class="item form-control"
+                                    placeholder="" />
                                 <label class="form-label" for="last_name">Last Name</label>
                                 <span class="error-msg text-danger"></span>
                             </div>
 
                             <!-- email input -->
                             <div class="form-floating mb-4">
-                                <input type="email" class="item form-control" id="email" placeholder="">
+                                <input type="email" class="item form-control" name="email" id="email" placeholder="">
                                 <label for="email">Email</label>
                                 <span class="error-msg text-danger"></span>
                             </div>
 
                             <!-- phone number input -->
                             <div class="form-floating mb-4">
-                                <input type="number" class="item form-control" id="phone_number" placeholder="">
+                                <input type="number" class="item form-control" name="phone" id="phone_number"
+                                    placeholder="">
                                 <label for="phone_number">Phone Number</label>
                                 <span class="error-msg text-danger"></span>
                             </div>
 
                             <!-- message input -->
                             <div class="form-floating mb-4">
-                                <textarea class="item form-control" placeholder="" id="message"
+                                <textarea class="item form-control" name="message" placeholder="" id="message"
                                     style="height: 250px"></textarea>
                                 <label for="message">Message</label>
                                 <span class="error-msg text-danger"></span>
