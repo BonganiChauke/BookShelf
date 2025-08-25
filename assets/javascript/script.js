@@ -34,6 +34,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         input.style.border = '1px solid green';
     }
 
+    //reset input color
+    function resetInputColor(input){
+        input.style.border = '1px solid black';
+    }
+
     // show success alert dialog
     function showSuccessAlert(message) {
         const successAlert = document.getElementById('alert-success');
@@ -216,6 +221,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
             
             // clear form fields values
             document.getElementById("save_message").reset();
+
+            // reset input color
+            resetInputColor(first_name);
+            resetInputColor(last_name);
+            resetInputColor(email);
+            resetInputColor(phone);
+            resetInputColor(message);
         }
 
     });
