@@ -66,3 +66,11 @@ body{
 textarea{
     resize: none;
 }
+
+.form-control{
+    border: 1px solid black;
+}
+
+.form-control:focus{
+    border-color: black;
+}
