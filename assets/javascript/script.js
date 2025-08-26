@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // DOMContentLoaded to load javascript when html is loaded to browser
+=======
+// DOMContentLoaded
+>>>>>>> aa9a4e1995f0ba8671570feaf80a74ed6988dc2c
 document.addEventListener("DOMContentLoaded", (event) => {
 
     //contact form variables 
@@ -8,8 +12,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const message = document.getElementById("message");
     const phone = document.getElementById("phone_number");
 
+<<<<<<< HEAD
     // select the form
     const form = document.getElementById("save_message");
+=======
+    // alert message errors
+    const success_message = document.getElementById("success-message");
+    const error_message = document.getElementById("error-message");
+>>>>>>> aa9a4e1995f0ba8671570feaf80a74ed6988dc2c
 
     // error messages 
     // **********************************************************
@@ -37,6 +47,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         input.style.border = '1px solid green';
     }
 
+<<<<<<< HEAD
     //reset input color
     function resetInputColor(input) {
         input.style.border = '1px solid black';
@@ -48,12 +59,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
         document.getElementById("success-message").textContent = message;
         if (successAlert) {
             successAlert.classList.remove('d-none');
+=======
+    // show success alert
+    function showSuccessAlert() {
+
+        const successAlert = document.getElementById('alert-success');
+        
+        if (successAlert) {
+            successAlert.style.display = 'block';
+>>>>>>> aa9a4e1995f0ba8671570feaf80a74ed6988dc2c
             setTimeout(() => {
                 successAlert.style.display = 'none';
             }, 5000);
         }
     }
 
+<<<<<<< HEAD
     // show error alert dialog
     function showErrorAlert(message) {
         const errorAlert = document.getElementById('alert-danger');
@@ -64,10 +85,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 setTimeout(() => {
                     errorAlert.style.display = 'none';
                 }, 5000);
+=======
+    // show error alert
+    function showErrorAlert(message) {
+        const errorAlert = document.getElementById('alert-danger');
+        const errorMessageAlert = document.getElementById('error-message');
+        if (errorAlert) {
+
+            if (errorMessageAlert) {
+                errorMessageAlert.textContent = message;
+                errorAlert.style.display = 'block';
+                setTimeout(() => {
+                    errorAlert.style.display = 'none';
+                }, 3000);
+>>>>>>> aa9a4e1995f0ba8671570feaf80a74ed6988dc2c
             }
         }
     }
 
+<<<<<<< HEAD
     //function to check all inputs if null
     function checkInputs() {
         const items = document.querySelectorAll('.item')
@@ -99,6 +135,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
             })
         }
     }
+=======
+>>>>>>> aa9a4e1995f0ba8671570feaf80a74ed6988dc2c
 
     // ******************************************************
     // function to validate inputs
@@ -201,7 +239,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
             inputError(message);
         }
     });
+<<<<<<< HEAD
     // *******************************************************
+=======
+>>>>>>> aa9a4e1995f0ba8671570feaf80a74ed6988dc2c
 
     // save message button event 
     document.getElementById("save_message")?.addEventListener("submit", (event) => {
@@ -209,6 +250,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // prevent default 
         event.preventDefault();
 
+<<<<<<< HEAD
         // //if to check all inputs fields values are valid
         // if (validateNames(first_name.value) || validateNames(last_name.value) || validateEmail(email.value) || validatePhoneNumber(phone.value)) {
 
@@ -252,6 +294,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
             .catch(err => {
                 showErrorAlert("Request failed: " + err);
             });
+=======
+        //if to check all inputs fields values are valid
+        if (!validateNames(first_name.value)) {
+            alert('Yes');
+            showSuccessAlert();
+        }
+>>>>>>> aa9a4e1995f0ba8671570feaf80a74ed6988dc2c
 
     });
 });
