@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const message = document.getElementById("message");
     const phone = document.getElementById("phone_number");
 
+    // select the form
+    const form = document.getElementById("save_message");
+
     // error messages 
     // **********************************************************
     //function to show error message
@@ -35,7 +38,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     //reset input color
-    function resetInputColor(input){
+    function resetInputColor(input) {
         input.style.border = '1px solid black';
     }
 
@@ -206,29 +209,49 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // prevent default 
         event.preventDefault();
 
-        //if to check all inputs fields values are valid
-        if (validateNames(first_name.value) || validateNames(last_name.value) || validateEmail(email.value) || validatePhoneNumber(phone.value)) {
-            
-            // check all inputs
-            checkInputs();
-            
-            // error message
-            showErrorAlert("Please check if all inputs are valid");
+        // //if to check all inputs fields values are valid
+        // if (validateNames(first_name.value) || validateNames(last_name.value) || validateEmail(email.value) || validatePhoneNumber(phone.value)) {
 
-        } else {
-            // success message
-            showSuccessAlert("Form submitted successful");
-            
-            // clear form fields values
-            document.getElementById("save_message").reset();
+        //     // check all inputs
+        //     checkInputs();
 
-            // reset input color
-            resetInputColor(first_name);
-            resetInputColor(last_name);
-            resetInputColor(email);
-            resetInputColor(phone);
-            resetInputColor(message);
-        }
+        //     // error message
+        //     showErrorAlert("Please check if all inputs are valid");
+
+        // } else {
+        //     // success message
+        //     showSuccessAlert("Form submitted successful");
+
+        //     // clear form fields values
+        //     document.getElementById("save_message").reset();
+
+        //     // reset input color
+        //     resetInputColor(first_name);
+        //     resetInputColor(last_name);
+        //     resetInputColor(email);
+        //     resetInputColor(phone);
+        //     resetInputColor(message);
+        // }
+
+        // Send form data via AJAX
+        const formData = new FormData(this);
+
+        fetch("contact.php", {
+            method: "POST",
+            body: formData
+        })
+            .then(res => res.text())
+            .then(data => {
+                if (data === "SUCCESS") {
+                    showSuccessAlert("Thank you, your message has been received!");
+                    document.getElementById("contactForm").reset();
+                } else {
+                    showErrorAlert(data); // Show SQL or validation error
+                }
+            })
+            .catch(err => {
+                showErrorAlert("Request failed: " + err);
+            });
 
     });
 });
