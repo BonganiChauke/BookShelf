@@ -1,7 +1,8 @@
 <!-- header included and database connection -->
 <?php
 include '../includes/header.php';
-include('/includes/db_connect.php');
+include '';
+
 
 // check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
