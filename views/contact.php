@@ -1,42 +1,5 @@
-<!-- header included and database connection -->
-<?php
-include '../includes/header.php';
-include '';
-
-
-// check if the form is submitted
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $createdAt = date('Y-m-d H:i:s');
-
-    $name = htmlspecialchars(trim($_POST['name']));
-    $last_name = htmlspecialchars(trim($_POST['last_name']));
-    $email = htmlspecialchars(trim($_POST['email']));
-    $phone = htmlspecialchars(trim($_POST['phone']));
-    $message = htmlspecialchars(trim($_POST['message']));
-
-    if (empty($name) || empty($last_name) || empty($email) || empty($phone) || empty($message)) {
-        echo "Please fill in all fields";
-        exit;
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Invalid email address";
-        exit;
-    } else {
-        $stmt = $conn->prepare("INSERT INTO contact_messages (name,last_name,email,message,phone,created_at) VALUES (?,?,?,?,?,?)");
-        $stmt->bind_param("ssssss", $name, $last_name, $email, $message, $phone, $createdAt);
-
-        if ($stmt->execute()) {
-            echo "SUCCESS";
-        } else {
-            echo "SQL Error: " . $stmt->error;
-        }
-        $stmt->close();
-        $conn->close();
-        exit;
-    }
-}
-
-
-?>
+<!-- header included -->
+<?php include '../includes/header.php'; ?>
 
 <!-- contact header section -->
 <div class="container-fluid p-0">
@@ -67,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <h3 class="mb-3 pb-2 pb=md-0 mb-md-2 px-md-2">Contact US</h3>
 
                         <!-- contact form -->
-                        <form class="px-md-2" id="save_message">
+                        <form class="px-md-2" id="save_message" action="process_contact.php" method="POST">
 
                             <!-- error message alert -->
                             <div class="alert alert-danger alert-dismissible fade show d-none" id="alert-danger"
