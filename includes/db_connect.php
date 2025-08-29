@@ -4,12 +4,13 @@ $host = "localhost";
 $user = "root";
 $pass = "";
 $dbname = "bookstore_db";
+$port = "3306";
 
 // Create connection
-$conn = new mysqli($host, $user, $pass, $dbname);
+$conn = mysqli_connect($host, $user, $pass, $dbname, $port);
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 ?>
