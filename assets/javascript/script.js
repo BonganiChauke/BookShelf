@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
 
     }
-    
+
 
     // show error alert dialog
     function showErrorAlert(message) {
@@ -225,57 +225,53 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // save message button event 
     document.getElementById("save_message")?.addEventListener("submit", (event) => {
 
-        // prevent default 
+        // prevents default load
         event.preventDefault();
 
-        // //if to check all inputs fields values are valid
-        // if (validateNames(first_name.value) || validateNames(last_name.value) || validateEmail(email.value) || validatePhoneNumber(phone.value)) {
+        // to check if each input valid
+        if (validateNames(first_name.value) || validateNames(last_name.value) || validateEmail(email.value) || validatePhoneNumber(phone.value)) {
 
-        //     // check all inputs
-        //     checkInputs();
+            //method checks all inputs are valid
+            checkInputs();
 
-        //     // error message
-        //     showErrorAlert("Please check if all inputs are valid");
+            //error message to the user
+            showErrorAlert("Please check if all inputs are valid");
 
-        // } else {
-        //     // success message
-        //     showSuccessAlert("Form submitted successful");
+        } else {
 
-        //     // clear form fields values
-        //     document.getElementById("save_message").reset();
+            //form data is an object that is to collect data and send form fields data  
+            // it automatically gathers all the form inputs that the name attribute
+            const formData = new FormData(event.target);
 
-        //     // reset input color
-        //     resetInputColor(first_name);
-        //     resetInputColor(last_name);
-        //     resetInputColor(email);
-        //     resetInputColor(phone);
-        //     resetInputColor(message);
-        // }
-
-        // Send form data via AJAX
-        const formData = new FormData(this);
-
-        fetch("contact.php", {
-            method: "POST",
-            body: formData
-        })
-            .then(res => res.text())
-            .then(data => {
-                if (data === "SUCCESS") {
-                    showSuccessAlert("Thank you, your message has been received!");
-                    document.getElementById("contactForm").reset();
-                } else {
-                    showErrorAlert(data); // Show SQL or validation error
-                }
+            // fetch is an api that used to make network requests such as post and get
+            fetch("/process/process_contact.php", {
+                method: "POST",
+                body: formData
             })
-            .catch(err => {
-                showErrorAlert("Request failed: " + err);
-            });
-        //if to check all inputs fields values are valid
-        if (!validateNames(first_name.value)) {
-            alert('Yes');
-            showSuccessAlert();
-        }
+                //get the api response as text
+                .then(res => res.text())
+                .then(data => {
+                    if (data === "SUCCESS") {
+                        showSuccessAlert("Thank you, your message has been received!");
+                        event.target.reset();
+                    } else {
+                        showErrorAlert(data);
+                    }
+                })
+                .catch(error => {
+                    showErrorAlert("Request failed: " + error);
+                });
 
+            showSuccessAlert("Form submitted successful");
+
+            // reset inputs
+            event.target.reset();
+            resetInputColor(first_name);
+            resetInputColor(last_name);
+            resetInputColor(email);
+            resetInputColor(phone);
+            resetInputColor(message);
+        }
     });
+
 });
