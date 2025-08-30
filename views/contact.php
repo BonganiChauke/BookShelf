@@ -84,7 +84,7 @@
                             </div>
 
                             <!-- button to save -->
-                            <button type="submit" id="save_message" class="btn btn-primary">Submit</button>
+                            <button type="submit" id="save_message" class="btn btn-primary w-100 btn-block">Submit</button>
 
                         </form>
                     </div>
