@@ -2,9 +2,10 @@
 // including database connection 
 include '../includes/db_connect.php';
 
-// Only run if form was submitted
+// if to check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // 1. Collect input values safely
+    
+    // collect user input values 
     $name = trim($_POST['name']);
     $last_name = trim($_POST['last_name']);
     $email = trim($_POST['email']);
