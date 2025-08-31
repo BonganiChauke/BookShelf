@@ -80,7 +80,7 @@
                                     <div class="col-md-6 mb-4">
                                         <div class="input-group mb-3">
                                             <div class="form-floating flex-grow-1">
-                                                <input type="password" class="form-control" id="password"
+                                                <input type="password" class="item form-control" id="password"
                                                     name="password" placeholder="">
                                                 <label for="password">Password</label>
                                             </div>
@@ -95,7 +95,7 @@
                                     <div class="col-md-6 mb-4">
                                         <div class="input-group mb-3">
                                             <div class="form-floating flex-grow-1">
-                                                <input type="password" class="form-control" id="confirm_password"
+                                                <input type="password" class="item form-control" id="confirm_password"
                                                     name="confirm_password" placeholder="">
                                                 <label for="confirm_password">Confirm Password</label>
                                             </div>
