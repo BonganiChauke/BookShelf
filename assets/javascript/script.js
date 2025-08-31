@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const message = document.getElementById("message");
     const phone = document.getElementById("phone_number");
 
+    // register form variable
+    const password = document.getElementById("password");
+    const confirm_password = document.getElementById("confirm_password");
+
     // alert message errors
     const success_message = document.getElementById("success-message");
     const error_message = document.getElementById("error-message");
