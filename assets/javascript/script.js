@@ -222,6 +222,31 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
     // *******************************************************
 
+    // password input eye function
+    // Toggle for main password
+    document.querySelectorAll('.toggle-password').forEach(function (toggle) {
+        toggle.addEventListener('click', function () {
+            const target = this.getAttribute('data-target');
+            const input = document.querySelector(target);
+            if (!input) return;
+
+            const show = input.type === 'password';
+            input.type = show ? 'text' : 'password';
+
+            // swap the icon
+            const icon = this.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-eye');        
+                icon.classList.toggle('fa-eye-slash');
+            }
+
+            // showing password
+            this.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+        });
+    });
+
+    // *********************************************************
+
     // save message button event 
     document.getElementById("save_message")?.addEventListener("submit", (event) => {
 
