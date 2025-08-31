@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // function to validate inputs
     // function to validate user names field
     function validateNames(name, userName) {
-        if (name == '') return `${userName} can not be empty`
+        if (name == '') return `${userName} is Required`
         if (/[^A-Za-z]/.test(name)) return `${userName} must contain only letters`
         if (name.length < 3) return `${userName} must be at least 3 characters long`
         if (name.length > 50)
@@ -133,21 +133,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // function to validate email field
     function validateEmail(email) {
-        if (email == '') return 'Email can not be empty';
+        if (email == '') return 'Email is Required';
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return 'Email is not valid';
         return '';
     }
 
     // function to validate phone number field
     function validatePhoneNumber(phone) {
-        if (phone == '') return 'Phone number can not be empty';
+        if (phone == '') return 'Phone number is Required';
         if (!/^\d{10}$/.test(phone)) return 'Phone number must be 10 digits long';
         return '';
     }
 
     //Function to validate message field
     function validateMessage(message) {
-        if (message == '') return 'Message can not be empty';
+        if (message == '') return 'Message is Required';
         if (message.length < 10) return 'Message must be at least 10 characters long';
         if (message.length > 500) return 'Message must not exceed 500 characters';
         return '';
