@@ -277,26 +277,51 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // password input eye function
     // Toggle for main password
-    document.querySelectorAll('.toggle-password').forEach(function (toggle) {
-        toggle.addEventListener('click', function () {
-            const target = this.getAttribute('data-target');
-            const input = document.querySelector(target);
-            if (!input) return;
+    (function () {
+        "use strict";
 
-            const show = input.type === 'password';
-            input.type = show ? 'text' : 'password';
+        // event listener for password visibility
+        document.addEventListener("click", (e) => {
+            let btn = e.target;
 
-            // swap the icon
-            const icon = this.querySelector('i');
-            if (icon) {
-                icon.classList.toggle('fa-eye');        
-                icon.classList.toggle('fa-eye-slash');
+            if (!btn.classList.contains("btn-toggle-password-visibility")) {
+                return;
             }
 
-            // showing password
-            this.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+            let input;
+
+            for (let item of btn.parentNode.parentNode.children) {
+                if (input) {
+                    break;
+                }
+
+                if (item.classList.contains("form-control")) {
+                    input = item;
+                    break;
+                }
+
+                if (item.classList.contains("form-floating")) {
+                    for (let floatingItem of item.children) {
+                        if (floatingItem.classList.contains("form-control")) {
+                            input = floatingItem;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (!input || typeof input.type === "undefined") {
+                return;
+            }
+
+            if (input.type === "password") {
+                input.type = "text";
+            } else if (input.type === "text") {
+                input.type = "password";
+            }
         });
-    });
+    })();
+
 
     // *********************************************************
 
