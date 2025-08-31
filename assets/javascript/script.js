@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     // event on focus listener for user phone number field
-    phone.addEventListener('focusout', function () {
+    phone?.addEventListener('focusout', function () {
         const phoneValue = phone.value.trim();
         const errorMessage = validatePhoneNumber(phoneValue);
         showError(phone, errorMessage);
@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     // event on focus listener for user message field
-    message.addEventListener('focusout', function () {
+    message?.addEventListener('focusout', function () {
         const messageValue = message.value.trim();
         const errorMessage = validateMessage(messageValue);
         showError(message, errorMessage);
