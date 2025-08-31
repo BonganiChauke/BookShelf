@@ -260,6 +260,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     });
 
+    // event focus listener for user confirmation password field
+    confirm_password.addEventListener('focusout', function () {
+        const confirm_password_value = confirm_password.value.trim();
+        const errorMessage = validateConfirmPassword(confirm_password_value);
+        showError(confirm_password, errorMessage);
+
+        if (errorMessage === '') {
+            inputSuccess(confirm_password);
+        } else {
+            inputError(confirm_password);
+        }
+    });
+
     // *******************************************************
 
     // password input eye function
