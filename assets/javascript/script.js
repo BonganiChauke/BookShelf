@@ -252,9 +252,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         const errorMessage = validatePassword(passwordValue);
         showError(password, errorMessage);
 
-        if(errorMessage === ''){
+        if (errorMessage === '') {
             inputSuccess(password);
-        }else {
+        } else {
             inputError(password);
         }
 
