@@ -236,6 +236,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
             inputError(message);
         }
     });
+
+    // event focus listener for user password field
+    password.addEventListener('focusout', function () {
+        const passwordValue = password.value.trim();
+        const errorMessage = validatePassword(passwordValue);
+        showError(password, errorMessage);
+
+        if(errorMessage === ''){
+            inputSuccess(password);
+        }else {
+            inputError(password);
+        }
+
+    });
+
     // *******************************************************
 
     // password input eye function
