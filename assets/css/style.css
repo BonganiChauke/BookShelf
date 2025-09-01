@@ -135,10 +135,6 @@ textarea {
   background-image: var(--svg-eye-open);
 }
 
-.input-group:has(input.is-valid) .input-group-text {
-  border-color: var(--bs-form-valid-border-color);
-}
-
-.input-group:has(input.is-invalid) .input-group-text {
-  border-color: var(--bs-form-invalid-border-color);
+.input-group .input-group-text {
+  border-color: black;
 }
