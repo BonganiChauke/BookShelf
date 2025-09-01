@@ -32,6 +32,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
         errorTxt.style.visibility = message ? 'visible' : 'hidden';
     }
 
+    // function to show error for password and confirm password
+    function showErrorPassword(input, message) {
+        const wrapper = input.closest(".col-md-6");
+        const errorTxt = wrapper.querySelector(".error-message");
+        const toggleBtn = wrapper.querySelector(".btn-toggle-password-visibility");
+
+        if (!errorTxt) {
+            console.error('No element for error message found for input:', input);
+            return;
+        }
+
+        errorTxt.textContent = message;
+        errorTxt.style.display = message ? 'block' : 'none';
+
+        if (toggleBtn) {
+            toggleBtn.classList.toggle("btn-invalid", !!message);
+        }
+    }
+
     // input error 
     function inputError(input) {
         input.style.border = '1px solid red';
