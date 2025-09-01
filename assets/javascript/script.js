@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     password.addEventListener('focusout', function () {
         const passwordValue = password.value.trim();
         const errorMessage = validatePassword(passwordValue);
-        showError(password, errorMessage);
+        showErrorPassword(password, errorMessage);
 
         if (errorMessage === '') {
             inputSuccess(password);
@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     confirm_password.addEventListener('focusout', function () {
         const confirm_password_value = confirm_password.value.trim();
         const errorMessage = validateConfirmPassword(confirm_password_value);
-        showError(confirm_password, errorMessage);
+        showErrorPassword(confirm_password, errorMessage);
 
         if (errorMessage === '') {
             inputSuccess(confirm_password);
