@@ -79,33 +79,37 @@
                                     <!-- password -->
                                     <div class="col-md-6 mb-4">
                                         <div class="input-group">
-                                            <div class="form-floating">
+                                            <div class="form-floating flex-grow-1">
                                                 <input type="password" class="item form-control border-end-0"
                                                     id="password" name="password" placeholder="">
                                                 <label for="password">Password</label>
                                             </div>
                                             <div class="input-group-text border-start-0 bg-transparent">
                                                 <button type="button"
-                                                    class="btn border-0 btn-toggle-password-visibility"></button>
+                                                    class="btn border-0 btn-toggle-password-visibility">
+                                                    <i class="bi bi-eye-slash"></i>
+                                                </button>
                                             </div>
                                         </div>
-                                        <span class="error-msg text-danger"></span>
+                                        <div class="invalid-feedback d-block error-message text-danger"></div>
                                     </div>
 
                                     <!-- confirm password -->
                                     <div class="col-md-6 mb-4">
                                         <div class="input-group">
-                                            <div class="form-floating">
-                                                <input type="password" class="item form-control"
+                                            <div class="form-floating flex-grow-1">
+                                                <input type="password" class="item form-control border-end-0"
                                                     id="confirm_password" name="confirm_password" placeholder="">
                                                 <label for="confirm_password">Confirm Password</label>
                                             </div>
                                             <div class="input-group-text border-start-0 bg-transparent">
                                                 <button type="button"
-                                                    class="btn border-0 btn-toggle-password-visibility"></button>
+                                                    class="btn border-0 btn-toggle-password-visibility">
+                                                    <i class="bi bi-eye-slash"></i>
+                                                </button>
                                             </div>
                                         </div>
-                                        <span class="error-msg text-danger"></span>
+                                        <div class="invalid-feedback d-block error-message text-danger"></div>
                                     </div>
 
                                 </div>
