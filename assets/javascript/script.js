@@ -395,4 +395,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     });
 
+    // register button event
+    document.getElementById("register_form").addEventListener("submit", (event) => {
+
+        // prevent defalt load
+        event.preventDefault();
+
+    });
+
 });
