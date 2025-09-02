@@ -281,7 +281,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // event focus listener for user confirmation password field
     confirm_password.addEventListener('focusout', function () {
         const confirm_password_value = confirm_password.value.trim();
-        const errorMessage = validateConfirmPassword(confirm_password_value);
+        const errorMessage = validateConfirmPassword(confirm_password_value, password.value);
         showErrorPassword(confirm_password, errorMessage);
 
         if (errorMessage === '') {
