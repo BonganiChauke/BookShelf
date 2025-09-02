@@ -191,8 +191,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //function to validate confirm password
     function validateConfirmPassword(confirm_password, password) {
         if (confirm_password == '') return 'Confirm Password is Required';
-        if (password.value === confirm_password.value) return '';
-        else 'Password do not match';
+        if (confirm_password !== password) return 'Password does not match';
         return '';
 
     }
