@@ -7,11 +7,9 @@
         style="height: 100vh; background-size: cover; background-position: center;">
         <div class="container">
             <div class="row gx-lg-5 align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h1 class="my-5 display-3 fw-bold ls-tight">Create Account
-                        <br />
-                        <span class="text-primary">Do more</span>
-                    </h1>
+                <div class="col-lg-6 mb-2 mb-lg-0">
+                    <h1 class="my-3 display-3 fw-bold ls-tight">Create Account</h1>
+                    <h3><span class="text-primary">Your Reading Journey Starts Here</span></h3>
 
                     <p style="color: hsl(217, 10%, 50.8%)">
                         Join our bookstore community and unlock a world of knowledge at your fingertips. By creating an
