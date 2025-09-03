@@ -138,3 +138,7 @@ textarea {
 .input-group .input-group-text {
   border-color: black;
 }
+
+a{
+    text-decoration: none;
+}
