@@ -64,7 +64,7 @@
                                 </div>
 
                                 <!-- submit button -->
-                                <button type="submit" class="btn btn-primary btn-block mb-4 w-100"> Register </button>
+                                <button type="submit" class="btn btn-primary btn-block mb-4 w-100"> Login </button>
 
                                 <!-- reset password -->
                                 <div class="justify-content-end">
