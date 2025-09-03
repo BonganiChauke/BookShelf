@@ -115,6 +115,14 @@
                                 <!-- submit button -->
                                 <button type="submit" class="btn btn-primary btn-block mb-4 w-100"> Register </button>
 
+                                <!-- login and reset account -->
+                                <div class="justify-content-end">
+                                    <p class="small mb-1 pb-lg-2"><a class="text-black-50"
+                                            href="./views/reset.php">Forgot
+                                            password?</a></p>
+                                    <p>Already have an account? <a href="/login.php" class="link-info">Login</a></p>
+                                </div>
+
 
                             </form>
 
