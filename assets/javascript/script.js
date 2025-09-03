@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // input event focus listeners for input fields
 
     // event on focus listener for user first name field
-    first_name.addEventListener('focusout', function () {
+    first_name?.addEventListener('focusout', function () {
         const nameValue = first_name.value.trim();
         const errorMessage = validateNames(nameValue, 'First Name');
         showError(first_name, errorMessage);
@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     // event on focus listener for user last name field
-    last_name.addEventListener('focusout', function () {
+    last_name?.addEventListener('focusout', function () {
         const nameValue = last_name.value.trim();
         const errorMessage = validateNames(nameValue, 'Last Name');
         showError(last_name, errorMessage);
@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     // event focus listener for user confirmation password field
-    confirm_password.addEventListener('focusout', function () {
+    confirm_password?.addEventListener('focusout', function () {
         const confirm_password_value = confirm_password.value.trim();
         const errorMessage = validateConfirmPassword(confirm_password_value, password.value);
         showErrorPassword(confirm_password, errorMessage);
@@ -396,7 +396,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     // register button event
-    document.getElementById("register_form").addEventListener("submit", (event) => {
+    document.getElementById("register_form")?.addEventListener("submit", (event) => {
 
         // prevent defalt load
         event.preventDefault();
