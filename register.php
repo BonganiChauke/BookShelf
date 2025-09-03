@@ -4,18 +4,16 @@
 <!-- register header section -->
 <div class="container-fluid p-0">
     <div class="px-4 py-5 px-md-5 text-center text-lg-start"
-        style="height: 100vh; background-size: cover; background-position: center;">
+        style="background-color: rgba(0, 0, 0, 0.4); background-image: url('assets/images/pexels-cottonbro-6214934.jpg'); height: 100vh; background-size: cover; background-position: center;">
         <div class="container">
             <div class="row gx-lg-5 align-items-center">
-                <div class="col-lg-6 mb-2 mb-lg-0">
-                    <h1 class="my-3 display-3 fw-bold ls-tight">Create Account</h1>
-                    <h3><span class="text-primary">Your Reading Journey Starts Here</span></h3>
-
-                    <p style="color: hsl(217, 10%, 50.8%)">
+                <div class="col-lg-6 mt-4 mb-4 mb-lg-4 text-white">
+                    <h1 class="my-3 display-4 fw-bold">Create Account</h1>
+                    <h3><span>Your Reading Journey Starts Here</span></h3>
+                    <p class="lead">
                         Join our bookstore community and unlock a world of knowledge at your fingertips. By creating an
                         account, you can easily browse and purchase books, save your favorites, manage your orders, and
-                        get personalized recommendations. Your account also allows you to securely track your purchases
-                        and stay updated with the latest arrivals and special offers.
+                        get personalized recommendations.
                     </p>
                 </div>
 
