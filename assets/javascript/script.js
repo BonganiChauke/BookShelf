@@ -403,4 +403,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     });
 
+    // login form event
+    document.getElementById("login_form")?.addEventListener("submit", (event) => {
+
+        //prevent default load
+        event.preventDefault();
+
+    });
+
 });
