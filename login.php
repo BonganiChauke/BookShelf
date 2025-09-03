@@ -23,7 +23,7 @@
                                 orders, and enjoy a personalized shopping experience tailored just for you.
                             </p>
 
-                            <!-- register form -->
+                            <!-- login form -->
                             <form id="login_form" action="" method="post">
 
                                 <!-- error message alert -->
