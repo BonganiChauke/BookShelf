@@ -27,12 +27,13 @@
                             Don't miss out on the opportunity to be part of something great. <br>
                             Subscribe now and let the journey begin!
                         </p>
-                        <form id="subscribe_form" method="post" action="#!">
+                        
+                        <!-- <form id="subscribe_form" method="post" action="#!">
                             <div class="row gy-5">
                                 <div class="col-12 col-md-8">
-                                    <!-- email input -->
+                                    
                                         <div class="form-floating">
-                                            <input type="email" class="item form-control" name="email" id="email"
+                                            <input type="email" class="item form-control" name="email"
                                                 placeholder="">
                                             <label for="email">Email</label>
                                             <span class="error-msg text-danger"></span>
@@ -44,7 +45,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
                 <div class="col-6 col-lg-2 col-xl-2">
