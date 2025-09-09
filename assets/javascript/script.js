@@ -401,6 +401,40 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // prevent defalt load
         event.preventDefault();
 
+        // to check if each input valid
+        if (validateNames(first_name.value) || validateNames(last_name.value) || validateEmail(email.value) || validatePassword(password.value) || validateConfirmPassword(confirm_password, password)) {
+
+            //method checks all inputs are valid
+            checkInputs();
+
+            //error message to the user
+            showErrorAlert("Please check if all inputs are valid");
+
+        }else{
+
+            // form object
+            const formData = new FormData(event.target);
+
+            //get the api response as text
+                fetch("/controllers/register_controller.php").then(res => res.text())
+                .then(data => {
+                    if (data === "SUCCESS") {
+                        showSuccessAlert("Thank you, your message has been received!");
+                        event.target.reset();
+                    } else {
+                        showErrorAlert(data);
+                    }
+                })
+                .catch(error => {
+                    showErrorAlert("Request failed: " + error);
+                });
+
+            showSuccessAlert("Form submitted successful");
+
+            // reset inputs
+            event.target.reset();
+        }
+
     });
 
     // login form event
