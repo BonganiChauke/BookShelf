@@ -202,44 +202,53 @@ document.addEventListener("DOMContentLoaded", (event) => {
     //***********************************************************
     // input event focus listeners for input fields
 
-    // event on focus listener for user first name field
-    first_name?.addEventListener('focusout', function () {
-        const nameValue = first_name.value.trim();
+    // event on focus function listener for user first name field
+    function firstNameFocus(input) {
+        input?.addEventListener('focusout', function () {
+            const nameValue = input.value.trim();
         const errorMessage = validateNames(nameValue, 'First Name');
-        showError(first_name, errorMessage);
+            showError(input, errorMessage);
 
         if (errorMessage === '') {
-            inputSuccess(first_name);
+                inputSuccess(input);
         } else {
-            inputError(first_name);
+                inputError(input);
         }
     });
+    }
 
     // event on focus listener for user last name field
-    last_name?.addEventListener('focusout', function () {
-        const nameValue = last_name.value.trim();
+    function lastNameFocus(input) {
+        input?.addEventListener('focusout', function () {
+            const nameValue = input.value.trim();
         const errorMessage = validateNames(nameValue, 'Last Name');
-        showError(last_name, errorMessage);
+            showError(input, errorMessage);
 
         if (errorMessage === '') {
-            inputSuccess(last_name);
+                inputSuccess(input);
         } else {
-            inputError(last_name);
+                inputError(input);
         }
     });
+    }
+
 
     // event on focus listener for user email field
-    email.addEventListener('focusout', function () {
-        const emailValue = email.value.trim();
+    function emailFocus(input) {
+        input?.addEventListener('focusout', function () {
+            const emailValue = input.value.trim();
         const errorMessage = validateEmail(emailValue);
-        showError(email, errorMessage);
+            showError(input, errorMessage);
 
         if (errorMessage === '') {
-            inputSuccess(email);
+                inputSuccess(input);
         } else {
-            inputError(email);
+                inputError(input);
         }
     });
+
+    }
+
 
     // event on focus listener for user phone number field
     phone?.addEventListener('focusout', function () {
