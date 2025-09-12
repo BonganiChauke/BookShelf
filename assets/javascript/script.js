@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const phone = document.getElementById("phone_number");
 
     // register form variable
+    const user_first_name = document.getElementById("reg_first_name");
+    const user_last_name = document.getElementById("reg_last_name");
+    const user_email = document.getElementById("reg_email");
     const password = document.getElementById("password");
     const confirm_password = document.getElementById("confirm_password");
 
