@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
 
     // event focus listener for user password field
-    password.addEventListener('focusout', function () {
+    password?.addEventListener('focusout', function () {
         const passwordValue = password.value.trim();
         const errorMessage = validatePassword(passwordValue);
         showErrorPassword(password, errorMessage);
