@@ -354,6 +354,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
     // *********************************************************
+    // calling focus out functions 
+    // first name
+    firstNameFocus(first_name);
+    firstNameFocus(user_first_name);
+    // last name
+    lastNameFocus(last_name);
+    lastNameFocus(user_last_name);
+    // email
+    emailFocus(email);
+    emailFocus(user_email);
 
     // save message button event 
     document.getElementById("save_message")?.addEventListener("submit", (event) => {
