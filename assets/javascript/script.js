@@ -428,7 +428,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         event.preventDefault();
 
         // to check if each input valid
-        if (validateNames(first_name.value) || validateNames(last_name.value) || validateEmail(email.value) || validatePassword(password.value) || validateConfirmPassword(confirm_password, password)) {
+        if (validateNames(user_first_name.value) || validateNames(user_last_name.value) || validateEmail(user_email.value) || validatePassword(password.value) || validateConfirmPassword(confirm_password.value, password.value)) {
 
             //method checks all inputs are valid
             checkInputs();
