@@ -77,7 +77,7 @@
                                         <div class="input-group">
                                             <div class="form-floating flex-grow-1">
                                                 <input type="password" class="item form-control border-end-0"
-                                                    id="reg_password" name="password" placeholder="">
+                                                    id="password" name="password" placeholder="">
                                                 <label for="password">Password</label>
                                             </div>
                                             <div class="input-group-text border-start-0 bg-transparent">
@@ -95,7 +95,7 @@
                                         <div class="input-group">
                                             <div class="form-floating flex-grow-1">
                                                 <input type="password" class="item form-control border-end-0"
-                                                    id="reg_confirm_password" name="confirm_password" placeholder="">
+                                                    id="confirm_password" name="confirm_password" placeholder="">
                                                 <label for="confirm_password">Confirm Password</label>
                                             </div>
                                             <div class="input-group-text border-start-0 bg-transparent">
