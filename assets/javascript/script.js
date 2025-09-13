@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const password = document.getElementById("password");
     const confirm_password = document.getElementById("confirm_password");
 
+    // subscribe form variable
+    const sub_email = document.getElementById("sub_email");
+
     // alert message errors
     const success_message = document.getElementById("success-message");
     const error_message = document.getElementById("error-message");
