@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const user_email = document.getElementById("reg_email");
     const password = document.getElementById("password");
     const confirm_password = document.getElementById("confirm_password");
-
+    
     // subscribe form variable
     const sub_email = document.getElementById("sub_email");
 
@@ -209,30 +209,30 @@ document.addEventListener("DOMContentLoaded", (event) => {
     function firstNameFocus(input) {
         input?.addEventListener('focusout', function () {
             const nameValue = input.value.trim();
-        const errorMessage = validateNames(nameValue, 'First Name');
+            const errorMessage = validateNames(nameValue, 'First Name');
             showError(input, errorMessage);
 
-        if (errorMessage === '') {
+            if (errorMessage === '') {
                 inputSuccess(input);
-        } else {
+            } else {
                 inputError(input);
-        }
-    });
+            }
+        });
     }
 
     // event on focus listener for user last name field
     function lastNameFocus(input) {
         input?.addEventListener('focusout', function () {
             const nameValue = input.value.trim();
-        const errorMessage = validateNames(nameValue, 'Last Name');
+            const errorMessage = validateNames(nameValue, 'Last Name');
             showError(input, errorMessage);
 
-        if (errorMessage === '') {
+            if (errorMessage === '') {
                 inputSuccess(input);
-        } else {
+            } else {
                 inputError(input);
-        }
-    });
+            }
+        });
     }
 
 
@@ -240,15 +240,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
     function emailFocus(input) {
         input?.addEventListener('focusout', function () {
             const emailValue = input.value.trim();
-        const errorMessage = validateEmail(emailValue);
+            const errorMessage = validateEmail(emailValue);
             showError(input, errorMessage);
 
-        if (errorMessage === '') {
+            if (errorMessage === '') {
                 inputSuccess(input);
-        } else {
+            } else {
                 inputError(input);
-        }
-    });
+            }
+        });
 
     }
 
@@ -436,13 +436,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
             //error message to the user
             showErrorAlert("Please check if all inputs are valid");
 
-        }else{
+        } else {
 
             // form object
             const formData = new FormData(event.target);
 
             //get the api response as text
-                fetch("/controllers/register_controller.php").then(res => res.text())
+            // fetch is an api that used to make network requests such as post and get
+            fetch("/controllers/register_controller.php", {
+                method: "POST",
+                body: formData
+            })
+                //get the api response as text
+                .then(res => res.text())
                 .then(data => {
                     if (data === "SUCCESS") {
                         showSuccessAlert("Thank you, your message has been received!");
