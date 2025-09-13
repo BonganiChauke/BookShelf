@@ -367,6 +367,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // email
     emailFocus(email);
     emailFocus(user_email);
+    emailFocus(sub_email);
 
     // save message button event 
     document.getElementById("save_message")?.addEventListener("submit", (event) => {
