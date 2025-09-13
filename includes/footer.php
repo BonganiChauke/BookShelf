@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-    
+
     <section class="py-4 py-md-5 py-xl-6">
         <div class="container">
             <div class="row gy-3">
@@ -27,25 +27,23 @@
                             Don't miss out on the opportunity to be part of something great. <br>
                             Subscribe now and let the journey begin!
                         </p>
-                        
-                        <!-- <form id="subscribe_form" method="post" action="#!">
-                            <div class="row gy-5">
-                                <div class="col-12 col-md-8">
-                                    
-                                        <div class="form-floating">
-                                            <input type="email" class="item form-control" name="email"
-                                                placeholder="">
-                                            <label for="email">Email</label>
-                                            <span class="error-msg text-danger"></span>
-                                        </div>
+
+                        <form id="subscribe_form" method="post" action="#!">
+                            <div class="row gy-3">
+                                <div class="col-12 col-md-5">
+                                    <div class="form-floating">
+                                        <input type="email" class="item form-control" id="sub_email" name="email" placeholder="">
+                                        <label for="email">Email</label>
+                                        <span class="error-msg text-danger"></span>
+                                    </div>
                                 </div>
                                 <div class="col-12 col-lg-8">
-                                    <div class="d-grid mb-3 mb-lg-0">
+                                    <div class="d-grid mb-0 mb-lg-0">
                                         <button class="btn btn-primary" type="submit">Subscribe</button>
                                     </div>
                                 </div>
                             </div>
-                        </form> -->
+                        </form>
                     </div>
                 </div>
                 <div class="col-6 col-lg-2 col-xl-2">
@@ -99,7 +97,7 @@
         </div>
     </section>
 
-    
+
     <div class="py-3 py-md-4 py-xl-5 bg-light">
         <div class="container">
             <div class="row g-3 align-items-center">
@@ -141,8 +139,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#!"
-                                    class="">
+                                <a href="#!" class="">
                                     <i class="fa fa-facebook-square" aria-hidden="true"></i>
                                 </a>
                             </li>
