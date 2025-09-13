@@ -22,8 +22,8 @@
 
                         <div class="card-body py-5 px-md-5">
 
-                            <!-- register form  action="./controllers/register_controller.php" -->
-                            <form id="register_form"  method="post">
+                            <!-- register form -->
+                            <form id="register_form" action="register_controller.php"  method="POST">
 
                                 <!-- error message alert -->
                                 <div class="alert alert-danger alert-dismissible fade show d-none" id="alert-danger"
