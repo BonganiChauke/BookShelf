@@ -4,7 +4,7 @@
 <!-- register header section -->
 <div class="container-fluid p-0">
     <div class="px-4 py-5 px-md-5 text-center text-lg-start"
-        style="background-color: rgba(0, 0, 0, 0.4); background-image: url('assets/images/pexels-cottonbro-6214934.jpg'); height: 100vh; background-size: cover; background-position: center;">
+        style="background-color: rgba(0, 0, 0, 0.4); background-image: url('assets/images/pexels-cottonbro-6214934.jpg'); min-height: 100vh; background-size: cover; background-position: center;">
         <div class="container">
             <div class="row gx-lg-5 align-items-center">
                 <div class="col-lg-6 mt-4 mb-4 mb-lg-4 text-white">
