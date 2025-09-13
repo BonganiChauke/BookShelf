@@ -20,11 +20,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt = $conn->prepare($sql);
 
     // bind parameters
-    $stmt -> bind_param("ssssss", $name, $last_name, $email, $password, $role, $createdAt);
+    $stmt->bind_param("ssssss", $first_name, $last_name, $email, $password, $role, $createdAt);
 
     // execute query and check result
     if ($stmt->execute()) {
-        echo "Message saved successfully!";
+        echo "User saved successfully!";
     } else {
         echo "Insert failed: " . $stmt->error;
     }
