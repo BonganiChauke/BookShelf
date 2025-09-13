@@ -467,4 +467,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     });
 
+    // subscribe for event 
+    document.getElementById("subscribe_form").addEventListener("submit", (event) => {
+
+        //prevent default load
+        event.preventDefault();
+    });
+
 });
