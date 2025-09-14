@@ -19,7 +19,7 @@
 
     <section class="py-4 py-md-5 py-xl-6">
         <div class="container">
-            <div class="row gy-3">
+            <div class="row gy-5">
                 <div class="col-12 col-lg-7 col-xl-6">
                     <div class="widget">
                         <h4 class="widget-title mb-3">Subscribe to Our Newsletter</h4>
@@ -30,7 +30,7 @@
 
                         <form id="subscribe_form" method="post" action="#!">
                             <div class="row gy-3">
-                                <div class="col-12 col-md-5">
+                                <div class="col-12 col-md-8">
                                     <div class="form-floating">
                                         <input type="email" class="item form-control" id="sub_email" name="email" placeholder="">
                                         <label for="email">Email</label>
