@@ -5,6 +5,9 @@ include '../includes/db_connect.php';
 // if to check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
+    // error input messages
+    $first_name_error = $last_name_error = $email_error = $password_error == "";
+
     //collect user inputs
     $first_name = trim($_POST['name']);
     $last_name = trim($_POST['last_name']);
