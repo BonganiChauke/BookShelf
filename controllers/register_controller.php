@@ -16,6 +16,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $role = "customer";
     $createdAt = date('Y-m-d H:i:s');
 
+    // input validation
+    if(empty($first_name)){
+        $first_name_error = "First Name Required";
+    }else if (strlen($first_name) < 3){
+        $first_name_error = "First Name must be at least 3 characters";
+    }
+
     // sql insert statement
     $sql = "INSERT INTO users (name, last_name, email, password, role, created_at) VALUES (?,?,?,?,?,?)";
 
