@@ -4,7 +4,7 @@
 class validation
 {
     // error input messages
-    public $first_name_error = $last_name_error = $email_error = $password_error == "";
+    public static $name_error = $last_name_error = $email_error = $password_error == "";
 
     // first name function validation
     public static function namesValidation($firstname): string
