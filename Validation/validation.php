@@ -31,9 +31,9 @@ class validation
         else if (filter_var($email, FILTER_VALIDATE_EMAIL) && checkdnsrr($domain, 'MX')){
             $email_error = "Email Invalid";
         }else{
-            $first_name_error = "";
+            $email_error = "";
         }
-        return $first_name_error;
+        return $email_error;
     }
 
 
