@@ -6,6 +6,12 @@ class validation
     // error input messages
     public static $name_error = $last_name_error = $email_error = $password_error == "";
 
+    // regex patterns 
+    public $capital = "!/[A-Z]/";
+    public string $lowerCase = "!/[a-z]/";
+    public string $num = "!/\d/";
+    public string $special_character = "!/[!@#$%^&*()]/";
+
     // names function validation
     public static function namesValidation($name, $username): string
     {
