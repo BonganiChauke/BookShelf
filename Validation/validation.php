@@ -42,6 +42,18 @@ class validation
         return $email_error;
     }
 
+    // password validation function
+    public static function validatePassword($password): string {
+        if ($password == '') return 'Password is Required';
+        if (strlen($password) < 8) return 'Minimum 8 characters Required';
+        if (preg_match($capital, $password)) return 'Password must contain at least one uppercase letter.';
+        if (preg_match($lowerCase, $password)) return 'Password must contain at least one lowercase letter.';
+        if (preg_match($num, $password)) return 'Password must contain at least one number.';
+        if (preg_match($special_character, $password)) return 'Password must contain at least one special character';
+        return '';
+
+    }
+
 
 }
 
