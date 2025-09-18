@@ -13,7 +13,7 @@ class validation
     public string $special_character = "!/[!@#$%^&*()]/";
 
     // names function validation
-    public static function namesValidation($name, $username): string
+    public function namesValidation($name, $username): string
     {
         if (empty($name)) {
             $name_error = $username. " Name Required";
@@ -26,7 +26,7 @@ class validation
     }
 
     //email validation function
-    public static function emailValidation($email): string {
+    public function emailValidation($email): string {
         
         // verify if the domain part of the email address has valid Mail Exchange (MX) records
         $domain = substr($email, strpos($email, '@') + 1);
