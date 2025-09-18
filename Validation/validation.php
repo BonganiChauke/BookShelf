@@ -16,13 +16,13 @@ class validation
     public function namesValidation($name, $username): string
     {
         if (empty($name)) {
-            $name_error = $username. " Name Required";
+            $this->error_message = $username. " Name Required";
         } else if (strlen($name) < 3) {
-            $name_error = $username. " must be at least 3 characters";
+            $this->error_message = $username. " must be at least 3 characters";
         }else{
-            $name_error = "";
+            $this->error_message = "";
         }
-        return $name_error;
+        return $this->error_message;
     }
 
     //email validation function
@@ -32,14 +32,14 @@ class validation
         $domain = substr($email, strpos($email, '@') + 1);
 
         if(empty($email)){
-            $email_error  = "Email Required";
+            $this->error_message  = "Email Required";
         }
         else if (filter_var($email, FILTER_VALIDATE_EMAIL) && checkdnsrr($domain, 'MX')){
-            $email_error = "Email Invalid";
+            $this->error_message = "Email Invalid";
         }else{
-            $email_error = "";
+            $this->error_message = "";
         }
-        return $email_error;
+        return $this->error_message;
     }
 
     // password validation function
