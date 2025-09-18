@@ -4,7 +4,7 @@
 class validation
 {
     // error input messages
-    public static $name_error = $last_name_error = $email_error = $password_error == "";
+    public $error_message = "";
 
     // regex patterns 
     public $capital = "!/[A-Z]/";
