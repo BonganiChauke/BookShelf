@@ -1,6 +1,9 @@
 <?php
 // including database connection 
-include '../includes/db_connect.php';
+include '../includes/db_connect.php'; '../Validation/validation.php';
+
+// instance of the class
+$validateInput = new validation();
 
 // if to check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
