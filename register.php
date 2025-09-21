@@ -45,7 +45,7 @@
                                             <input type="text" id="reg_first_name" name="name" class="item form-control"
                                                 placeholder="" />
                                             <label class="form-label" for="first_name">First Name</label>
-                                            <span class="error-msg text-danger"></span>
+                                            <span class="error-msg text-danger"><?php echo $first_name_error; ?></span>
                                         </div>
                                     </div>
 
@@ -55,7 +55,7 @@
                                             <input type="text" id="reg_last_name" name="last_name" class="item form-control"
                                                 placeholder="" />
                                             <label class="form-label" for="first_name">Last Name</label>
-                                            <span class="error-msg text-danger"></span>
+                                            <span class="error-msg text-danger"><?php echo $last_name_error; ?></span>
                                         </div>
                                     </div>
 
@@ -66,7 +66,7 @@
                                     <input type="email" class="item form-control" name="email" id="reg_email"
                                         placeholder="">
                                     <label for="email">Email</label>
-                                    <span class="error-msg text-danger"></span>
+                                    <span class="error-msg text-danger"><?php echo $email_error; ?></span>
                                 </div>
 
                                 <!-- password and password confirmation row -->
@@ -87,7 +87,7 @@
                                                 </button>
                                             </div>
                                         </div>
-                                        <div class="invalid-feedback d-block error-message text-danger"></div>
+                                        <div class="invalid-feedback d-block error-message text-danger"><?php echo $password_error; ?></div>
                                     </div>
 
                                     <!-- confirm password -->
